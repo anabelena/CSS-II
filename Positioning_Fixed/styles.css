@@ -53,9 +53,11 @@ main{
     grid-column: 1/span 3;
 }
 
+/*position fixed su referencia es el viewport*/
 .sidebar{
     position: fixed;
     width: 100%;
     background-color: tomato;
     height: 400px;
+    top: 4rem;
 }
