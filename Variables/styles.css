@@ -1,0 +1,34 @@
+/*   
+Declaracion de la variable
+:root{
+--custom-name : value;
+--color: hsl rgba HEX
+--border: 1px solid green;
+--text: 'hola mundo';
+--color-two: var(--color);
+}
+*/
+
+
+:root{
+    --primary-color:blueviolet;
+    --text-color:blue;
+    --warning-color:yellow;
+   
+}
+
+
+p{
+    color: var(--text-color);
+}
+
+h2{
+    background-color: var(--primary-color);
+     /*Fallback
+     - Valor que se utiliza cuando algo falla.
+     - Valor de respaldo
+     - Podemos usarlo por si hay error de typo para visualizarlo
+     */
+    /* background-color: var(--primary-color,var(warning-color)); */
+   
+}
