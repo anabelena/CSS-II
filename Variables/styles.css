@@ -16,15 +16,16 @@ Declaracion de la variable
     --warning-color:yellow;
     --min-size: 2rem;
     --max-size: 3rem;
-    --size: calc(var(--min-size)+var(--max-size));
+    --size: calc(var(--min-size) + var(--max-size));
    /* Al hacer operaciones aritmeticas no obtenemos un VALOR,
    estamos haciendo Calculos en TIEMPO REAL*/
 }
 
-.element{
+.element {
     width: var(--size);
     height: var(--size);
     background-color: red;
+    border: 1px solid black;
 }
 
 p{
