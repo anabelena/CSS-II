@@ -14,9 +14,18 @@ Declaracion de la variable
     --primary-color:blueviolet;
     --text-color:blue;
     --warning-color:yellow;
-   
+    --min-size: 2rem;
+    --max-size: 3rem;
+    --size: calc(var(--min-size)+var(--max-size));
+   /* Al hacer operaciones aritmeticas no obtenemos un VALOR,
+   estamos haciendo Calculos en TIEMPO REAL*/
 }
 
+.element{
+    width: var(--size);
+    height: var(--size);
+    background-color: red;
+}
 
 p{
     color: var(--text-color);
