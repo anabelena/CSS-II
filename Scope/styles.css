@@ -1,0 +1,72 @@
+/* SCOPE */
+/* 
+    Tipos de SCOPE en Variables CSS
+
+    1. Global: Accesible en cualquier parte del documento.
+        :root{
+            --primary-color:red;
+        }
+
+
+    2. Local: Son declarados en linea. Afectan a los hijos dentro del elemento 
+        en el que es declarado.
+
+        <p style="--color:blue;"> 
+
+        This is a paragraph
+
+        </p>
+
+    3. DOM: 
+       Puedo definir las variables en un documento css y llamarlo desde otro.
+       Es decir a nivel de DOM se comparten las variables.
+
+        article{
+            --color-text:#00ff23;
+        }
+*/
+
+:root {
+  --primary-color: #ff00ff;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+/* article{
+    --bg:red;
+    --color:blue;
+}
+
+article p {
+    background: var(--bg);
+    color:var(--color)
+} */
+
+p {
+  --text-color: blueviolet;
+}
+
+p {
+  color: var(--text-color);
+}
+
+/*  HOISTING 
+
+    Primero estamos utilizando la variable y luego la estamos DECLARANDO.
+
+    p{
+    color: var(--text-color);
+    }
+
+    :root{
+    --color:red;
+    }
+
+    El Hoisting reordena esto al momento de ejecutarse para que 
+    primero se haga la declaracion y luego el uso de la variable.
+
+
+
+ */
