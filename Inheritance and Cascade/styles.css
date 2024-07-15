@@ -1,0 +1,21 @@
+body{
+  --color:green;
+  --text:3em;
+  color:var(--color);
+  font-size:var(--text);
+}
+
+.container{
+    color:blue;
+    font-size: 15px;
+}
+
+.container .text{
+    /*--color y --text deben heredar los valores de las variables definididas en los 
+    ANCESTROS, si es que existen */
+    --color:inherit;
+    --text:inherit;
+    color:var(--color);
+    font-size:var(--text);
+}
+
