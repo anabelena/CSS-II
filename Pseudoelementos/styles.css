@@ -1,5 +1,5 @@
 body{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: sans-serif;
 }
 
@@ -21,6 +21,7 @@ body{
 
 h1::before{
     content : '!';
+    color: purple;
 }
 
 /* OJO un pseudoelemento pretende ser un elemento pero no existe en el DOM
@@ -28,20 +29,21 @@ en el ejemplo anterior agregue ! pero no puedo seleccionarlo.
 */
 
 h1::after{
-    content:'!!!!'
+    content:'!';
+    color: pink;
 }
 
 .container{
     width: 300px;
     height: 100px;
-    background: tomato;
+    background: lightcoral;
 }
-
 
 .container:empty::before{
-    background-color: blue;
-    content: 'no hay contenido';
+    background-color: yellow;
+    content: 'No hay contenido';
 }
+
 
 /* Atributos data se forman con data-'nombre'*/
 
@@ -56,4 +58,15 @@ p::after{
     font-weight: 600;
 }
 
+.parrafo{
+    text-align: justify;
+}
 
+.parrafo::first-line{
+    text-decoration:underline;
+}
+
+.parrafo::selection{
+    background-color: lightblue;
+    color: white;
+}
